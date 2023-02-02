@@ -5,7 +5,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: '技术题库',
   description: '收集 IT 方面的题库，为己所用',
-  head: [['link', { rel: 'icon', href: '/imgs/favicon.svg' }]],
+  head: [['link', { rel: 'icon', href: '/it-topic/imgs/favicon.svg' }]],
   theme: defaultTheme({
     repo: 'https://github.com/',
     editLink: false,
