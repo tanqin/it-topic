@@ -3,11 +3,14 @@ home: true
 title: 首页
 heroImage: /imgs/logo.png
 actions:
-  - text: ← 前端
+  - text: 前端 →
     link: /frontend/
     type: primary
-  - text: 后端 →
-    link: /backend/
+  - text: Java →
+    link: /backend/Java
+    type: primary
+  - text: Python →
+    link: /backend/Python
     type: primary
 features:
   - title: 👨‍🎓 前端
