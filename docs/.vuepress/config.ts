@@ -11,6 +11,7 @@ export default defineUserConfig({
   theme: defaultTheme({
     repo: 'https://github.com/',
     editLink: false,
+    lastUpdated: false,
     navbar: [
       {
         text: '前端',

@@ -94,3 +94,7 @@ v-for 优先级高于 v-if，v-if 是通过创建和销毁 dom 实现元素显�
 ::: details 第11题：说说你对Vue中 keep-alive 的理解
 keep-alive 能在组件切换时将状态留在内存中不被销毁，防止重复渲染 DOM。
 :::
+
+::: details 第12题：VNode 渲染原理
+VNode 渲染依靠得 render() 函数，最终得到的是一个 dom 的描述对象，这个对象包含有元素属性、子节点、key 值等重要信息，可以通过这个描述对象创建真实 dom。
+:::
