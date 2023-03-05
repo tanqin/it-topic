@@ -96,5 +96,107 @@ keep-alive 能在组件切换时将状态留在内存中不被销毁，防止重
 :::
 
 ::: details 第12题：VNode 渲染原理
-VNode 渲染依靠得 render() 函数，最终得到的是一个 dom 的描述对象，这个对象包含有元素属性、子节点、key 值等重要信息，可以通过这个描述对象创建真实 dom。
+VNode 渲染依靠的 render() 函数，最终得到的是一个 dom 的描述对象，这个对象包含有元素属性、子节点、key 值等重要信息，可以通过这个描述对象创建真实 dom。
+:::
+
+::: details 第13题：父子组件如何传值？
+父传子：父组件通过在子组件上添加属性的方式传递数据，子组件通过 props 属性接收。
+子传父：子组件通过 `this.$emit('eventName', data)` 回传事件的方式传递数据，父组件通过 `@eventName='func'` 绑定事件函数接收。
+:::
+
+::: details 第14题：v-model 的实现原理
+:value 绑定响应式数据，@input 触发事件获取当前 $event.target.value，再赋值给 :value 绑定的变量。
+:::
+
+::: details 第15题：组件封装过程
+将公共常用的部分提取出去。通过 props 接收父组件传递的数据，通过 this.$emit() 传递事件的方式将数据传递给父组件。
+:::
+
+::: details 第16题：谈谈你对渐进式的理解？
+学习时可以从某个很小的部分入手，循序渐进，在后续通过增量学习的方式扩充所需的项目功能。
+:::
+
+::: details 第17题：Vue的优势
+渐进式：易上手，开发者可以从简单的组件开始，逐渐去搭建复杂的系统。
+
+轻量级：框架体积小。
+
+组件化：组件化开发，提高开发效率。
+
+MVVM 数据双向绑定：模型、视图同步更新，减少 dom 操作。
+
+高性能：虚拟 dom + diff 算法。
+
+插件化：插件生态丰富。
+:::
+
+::: details 单页面与多页面应用的区别
+单页面：应用只有一个 HTML 作为入口，一开始只需要加载一次 JS、CSS 等资源。页面的切换都是由路由去完成组件的切换，仅刷新局部资源，
+
+多页面：包含多个独立页面的应用，访问每一个页面都必须重新加载 JS、CSS　等资源。页面跳转需要整个页面刷新，用户体验不友好。
+:::
+
+::: details v-on 是否可以绑定多个事件？
+可以通过对象形式绑定多个事件。
+
+1. v-on 绑定多个方法（采用对象形式）
+
+```js
+<button v-on="{click: clickMethods, mousemove: mouseMethods}">按钮<button>
+```
+
+2. v-on 一个事件绑定多个方法（语法糖 @）
+<button @click="click1,click2">按钮</button>
+:::
+
+::: details computed 与 watch 的区别
+computed 计算属性基于 data 中声明过或 props 传递过来的数据通过计算得到一个新值，新值会根据已知值得变化而变化，且 computed 具有缓存功能，多次使用同一个 computed 计算得属性值，只会执行一次 computed 内定义的 function，直到依赖项改变才会重新计算。
+
+watch 监听属性可以用来监听 data、props、computed 内的数据变化，然后执行某些具体的业务操作，当属性变化时，监听的的回调函数会自动执行。
+
+对于多个监听对象要进行同一操作，watch 需要监听多次，而 computed 只需要执行一次。
+在执行异步或开销比较大的操作时，watch 方式更合适。
+:::
+
+::: details v-if 与 v-show 的区别和应用场景。
+v-if：通过创建、销毁 dom 的方式控制元素的显隐。
+
+v-show: 通过添加、删除 CSS 属性 `display: none` 的方式控制元素的显隐。
+
+v-if 适用于运行条件很少改变的场景；v-show 适用于频繁切换显隐的场景。
+:::
+
+::: details Vue 的 data 为什么是个函数而不是一个对象
+data 为一个函数是为了防止多个组件实例对象之间共用一个 data，产生数据污染。
+:::
+
+::: details delete 与 Vue.delete 删除数组的区别
+delete：只是将被删除的元素变成 empty/undefined，数组长度不变。
+
+Vue.delete：删除数组元素，数组长度会减少。
+
+```js
+const arr1 = [1, 2, 3, 4]
+delete arr1[1]
+console.log(arr1) // [1, empty, 3, 4]
+
+const arr2 = [1, 2, 3, 4]
+this.$delete(arr2, 1)
+console.log(arr2) // [1, 3, 4]
+```
+
+:::
+
+::: details 监听对象的某个属性变化的方式有哪些
+共 3 种方式。
+
+方式一：watch + deep 深度监听
+
+方式二：computed + watch
+
+方式三：watch 直接使用对象的某个属性
+:::
+
+::: details 谈谈对 MVVM 的理解
+MVVM 是一种架构模式，它的核心思想是把每个页面分为了 Model、View、ViewModel 三部分。其中 Model 表示数据模型，View 表示 UI 组件，ViewModel 用于实现 View 和 Model 的双向数据绑定。
 :::
