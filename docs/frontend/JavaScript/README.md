@@ -249,3 +249,27 @@ person.getName() // 成功访问到父类的方法
 /i （ignoreCase）匹配时不区分大小写
 /m （multiple）多行匹配。m 会影响 ^、$。若不指定 m，则 ^ 只在字符串的最开头，$ 只在字符串的最结尾。即匹配整个串的开始和结束；若指定 m，则 ^ 在字符串每一行的开头，$ 在字符串每一行的结尾。即匹配每一行的开始和结束
 :::
+
+::: details 声明式与命令式的区别
+声明式：关注过程。
+
+命令式：关注结果。
+
+举一个数组求和的例子：
+
+```js
+const arr = [1, 2, 3, 4, 5]
+
+// 声明式编程
+let sum1 = 0
+for(let i = 0; i < arr.length; i++) {
+  sum1 += arr[i]
+}
+console.log('sum1 =>', sum1)
+
+// 命令式编程
+const sum2 = arr.reduce((memo, current) => memo + current, 0)
+console.log('sum2 =>',sum2)
+```
+
+:::

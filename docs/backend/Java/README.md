@@ -148,3 +148,80 @@ tinyint(1) 和 char(1) 都是占用 1 个字节空间。
 ```
 
 :::
+
+::: details NGINX 如何配置 https
+
+1. 在 `nginx/conf/nginx.conf` 文件中的 server 中添加以下配置：
+
+```conf
+server {
+    listen       8186 ssl;  
+    server_name  www.xxx.com;    # 域名
+    ssl_certificate www.xxx.crt;    # 证书名称（证书放在nginx.config同级目录下，否则要填写路径）
+    ssl_certificate_key www.xxx.key;    # 证书秘钥（证书放在nginx.config同级目录下，否则要填写路径）
+    ssl_session_cache    shared:SSL:1m;    # 开启缓存 大小1M
+    ssl_session_timeout  5m;    # 指定客户端可以重用会话参数的时间（超时之后不可使用）
+    ssl_ciphers  HIGH:!aNULL:!MD5;    # 选择加密套件
+    ssl_prefer_server_ciphers  on;     # 设置协商加密算法时，优先使用我们服务端的加密套件，而不是客户端浏览器的加密套件   
+
+    location / {
+        root   /home/xx/vue/;    # 页面路径
+            index  index.html index.htm;
+        }
+
+        error_page 404 /404.html;
+            location = /40x.html {
+        }
+
+        error_page 500 502 503 504 /50x.html;
+            location = /50x.html {
+        }
+    }
+```
+
+2. 配置只允许域名访问，IP 访问 403 提示
+
+在所有 server 前新建 server ，ssl 需要把证书也加上，否则域名访问也会 403
+
+```conf
+server {
+        listen       8186 ssl;
+        server_name  _;
+        return 403;
+        ssl_certificate www.xxxx.crt;
+        ssl_certificate_key www.xxxx.key;
+        ssl_session_cache    shared:SSL:1m;
+        ssl_session_timeout  5m;
+        ssl_ciphers  HIGH:!aNULL:!MD5;
+        ssl_prefer_server_ciphers  on;
+}
+```
+
+3. 检查配置并重启 NGINX
+
+```shell
+# 检查配置
+nginx -t
+
+# 重启
+nginx -s reload
+```
+
+:::
+
+::: details SpringBoot 如何整合 MyBatis
+
+1. pom.xml 中导入 mybatis 整合包；
+
+2. 编写 service 接口、mapper 接口、mapper 接口对应的 xml；
+
+3. application.properties 或 application.yml 添加 mybatis 配置。包括接口路径配置、xml 路径配置；
+
+4. 编写 controller 类；
+:::
+
+::: details 内连接与外连接的区别
+内连接：结果集只保留两表中匹配的数据，舍弃了不匹配的数据。
+
+外连接：结果集除了包含符合连接连接条件的行数据，还包含左表、右表的所有行数据。
+:::
