@@ -1,7 +1,7 @@
 # CSS
 
 ::: details CSS 盒模型
-指所有 HTML 元素都可以看作一个盒子，它包括：margin、border、padding、content。
+所有 HTML 元素都可以看作一个盒子，它的组成包括：content、padding、border、margin。
 :::
 
 ::: details BFC 的理解？如何触发 BFC？它的应用场景？

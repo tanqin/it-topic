@@ -1,5 +1,5 @@
 import { defineUserConfig, defaultTheme } from 'vuepress'
-
+import { searchPlugin } from '@vuepress/plugin-search'
 const base = '/it-topic/'
 
 export default defineUserConfig({
@@ -59,8 +59,27 @@ export default defineUserConfig({
             link: '/backend/Python/'
           }
         ]
+      },
+      {
+        text: '前端面试',
+        children: [
+          {
+            text: '普睿德利',
+            link: '/interview/PRDL'
+          }
+        ]
       }
     ],
     sidebar: 'auto'
-  })
+  }),
+  plugins: [
+    () =>
+      searchPlugin({
+        locales: {
+          '/': {
+            placeholder: '搜索'
+          }
+        }
+      })
+  ]
 })
