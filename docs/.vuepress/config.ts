@@ -8,6 +8,11 @@ export default defineUserConfig({
   title: '技术题库',
   description: '收集 IT 方面的题库，为己所用',
   head: [['link', { rel: 'icon', href: base + 'imgs/favicon.svg' }]],
+  markdown: {
+    headers: {
+      level: [2, 3, 6]
+    }
+  },
   theme: defaultTheme({
     repo: 'https://github.com/',
     editLink: false,
@@ -64,13 +69,30 @@ export default defineUserConfig({
         text: '前端面试',
         children: [
           {
-            text: '普睿德利',
-            link: '/interview/PRDL'
+            text: '普睿德利(2023-03-15)',
+            link: '/interview/PRDL_2023-03-15'
+          },
+          {
+            text: '华微软件(2023-03-08)',
+            link: '/interview/HWRJ_2023-03-08'
+          },
+          {
+            text: '宝露公司(2023-03-07)',
+            link: '/interview/BLGS_2023-03-07'
+          },
+          {
+            text: '美盈智能(2023-02-22)',
+            link: '/interview/MYZN_2023-02-22'
+          },
+          {
+            text: '中软国际(2023-02-21)',
+            link: '/interview/ZRGJ_2023-02-21'
           }
         ]
       }
     ],
-    sidebar: 'auto'
+    sidebar: 'auto',
+    sidebarDepth: 3
   }),
   plugins: [
     () =>

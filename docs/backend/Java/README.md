@@ -208,20 +208,3 @@ nginx -s reload
 ```
 
 :::
-
-::: details SpringBoot 如何整合 MyBatis
-
-1. pom.xml 中导入 mybatis 整合包；
-
-2. 编写 service 接口、mapper 接口、mapper 接口对应的 xml；
-
-3. application.properties 或 application.yml 添加 mybatis 配置。包括接口路径配置、xml 路径配置；
-
-4. 编写 controller 类；
-:::
-
-::: details 内连接与外连接的区别
-内连接：结果集只保留两表中匹配的数据，舍弃了不匹配的数据。
-
-外连接：结果集除了包含符合连接连接条件的行数据，还包含左表、右表的所有行数据。
-:::
