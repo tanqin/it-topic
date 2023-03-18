@@ -35,6 +35,10 @@ export default defineUserConfig({
             link: '/frontend/JavaScript/'
           },
           {
+            text: 'TypeScript',
+            link: '/frontend/TypeScript/'
+          },
+          {
             text: 'Vue',
             link: '/frontend/Vue/'
           },
@@ -95,13 +99,12 @@ export default defineUserConfig({
     sidebarDepth: 3
   }),
   plugins: [
-    () =>
-      searchPlugin({
-        locales: {
-          '/': {
-            placeholder: '搜索'
-          }
+    searchPlugin({
+      locales: {
+        '/': {
+          placeholder: '搜索'
         }
-      })
+      }
+    })
   ]
 })

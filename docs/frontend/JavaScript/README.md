@@ -1,6 +1,8 @@
 # JavaSCript
 
-::: details js 如何移除事件监听
+###### js 如何移除事件监听
+
+::: details 查看答案
 
 ```js
 function printScrollHeight() {
@@ -15,7 +17,9 @@ document.removeEventListener('scroll', printScrollHeight)
 
 :::
 
-::: details 谈谈你对事件冒泡和捕获的理解？如何阻止事件冒泡？事件冒泡应用场景？
+###### 谈谈你对事件冒泡和捕获的理解？如何阻止事件冒泡？事件冒泡应用场景？
+
+::: details 查看答案
 事件冒泡：事件自下而上从目标元素一直向上传递到 document 的过程。
 
 事件捕获：事件自上而下从 document 一直向下传递到目标元素的过程。
@@ -25,23 +29,31 @@ document.removeEventListener('scroll', printScrollHeight)
 事件冒泡使应用场景：将子元素中多个相同的事件操作由父元素集中处理，例如：列表中多个元素都包含点击删除方法，可以利用事件冒泡机制，将删除方法绑定在外层的父元素上统一处理。
 :::
 
-::: details 如何阻止默认事件
+###### 如何阻止默认事件
+
+::: details 查看答案
 比如点击一个 a 标签，会进行跳转，可以使用 event.preventDefault() 方法阻止默认事件。
 :::
 
-::: details 防抖与节流的理解？各自的应用场景？
+###### 防抖与节流的理解？各自的应用场景？
+
+::: details 查看答案
 防抖：在一次操作过程中，如果有新的操作则重新刷新定时器。应用：输入框输入后延迟自动搜索。
 
 节流：前一次操作未完成时无法开启下一次操作。应用：下拉刷新和上拉加载更多。
 :::
 
-::: details 浅拷贝与深拷贝的理解
+###### 浅拷贝与深拷贝的理解
+
+::: details 查看答案
 浅拷贝：拷贝对象的引用，对于复杂数据类型而言拷贝后的数据更改会影响原数据。
 
 深拷贝：创建一块新的内存空间用于存储拷贝后的数据，拷贝数据与原数据由于地址不同，所以互不影响。
 :::
 
-::: details this 指向的几种情况
+###### this 指向的几种情况
+
+::: details 查看答案
 大多数情况下，函数调用方式决定了 this 的指向。
 
 全局环境中定义的函数，this 指向 window。
@@ -53,7 +65,9 @@ new 关键字创建的实例对象，this 指向这个实例对象。
 箭头函数由于没有 this，它内部的 this 指向外层函数的 this，如果外层函数也没有 this，逐层向上找，直到 window 对象为止。
 :::
 
-::: details JS 继承方式有哪些
+###### JS 继承方式有哪些
+
+::: details 查看答案
 
 参考：<https://blog.csdn.net/weixin_41759744/article/details/125299029>
 
@@ -241,11 +255,15 @@ person.getName() // 成功访问到父类的方法
 
 :::
 
-::: details 数组迭代器种类
+###### 数组迭代器种类
+
+::: details 查看答案
 共有 6 种迭代器。forEach、map、filter、every、some、reduce。
 :::
 
-::: details 正则表达式的标记有哪些
+###### 正则表达式的标记有哪些
+
+::: details 查看答案
 共有 3 个。/g、/i、/m
 
 /g （global）全局匹配
@@ -255,7 +273,9 @@ person.getName() // 成功访问到父类的方法
 /m （multiple）多行匹配。m 会影响 ^、$。若不指定 m，则 ^ 只在字符串的最开头，$ 只在字符串的最结尾。即匹配整个串的开始和结束；若指定 m，则 ^ 在字符串每一行的开头，$ 在字符串每一行的结尾。即匹配每一行的开始和结束
 :::
 
-::: details 声明式与命令式的区别
+###### 声明式与命令式的区别
+
+::: details 查看答案
 声明式：关注过程。
 
 命令式：关注结果。
@@ -277,4 +297,10 @@ const sum2 = arr.reduce((memo, current) => memo + current, 0)
 console.log('sum2 =>',sum2)
 ```
 
+:::
+
+###### JS 中有哪几种数据类型
+
+::: details 查看答案
+共有 9 种数据类型。分别为 number、string、boolean、symbol、null、undefined、object、array、function
 :::
