@@ -91,7 +91,11 @@ export default defineUserConfig({
           {
             text: '中软国际(2023-02-21)',
             link: '/interview/ZRGJ_2023-02-21'
-          }
+          },
+          {
+            text: '悠久商服(2023-03-15)',
+            link: '/interview/YJSF_2023-02-18'
+          },
         ]
       }
     ],
