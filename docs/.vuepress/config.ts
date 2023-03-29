@@ -73,6 +73,10 @@ export default defineUserConfig({
         text: '前端面试',
         children: [
           {
+            text: '悠久商服(2023-03-18)',
+            link: '/interview/YJSF_2023-02-18'
+          },
+          {
             text: '普睿德利(2023-03-15)',
             link: '/interview/PRDL_2023-03-15'
           },
@@ -92,10 +96,7 @@ export default defineUserConfig({
             text: '中软国际(2023-02-21)',
             link: '/interview/ZRGJ_2023-02-21'
           },
-          {
-            text: '悠久商服(2023-03-15)',
-            link: '/interview/YJSF_2023-02-18'
-          },
+         
         ]
       }
     ],
