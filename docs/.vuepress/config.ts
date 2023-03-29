@@ -7,7 +7,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: '技术题库',
   description: '收集 IT 方面的题库，为己所用',
-  head: [['link', { rel: 'icon', href: base + 'imgs/favicon.svg' }]],
+  head: [['link', { rel: 'icon', href: base + 'imgs/favicon.svg' }],   ['script', { type: 'text/javascript', src: 'utils/myLog.js' }]],
   markdown: {
     headers: {
       level: [2, 3, 6]
@@ -103,13 +103,5 @@ export default defineUserConfig({
     sidebar: 'auto',
     sidebarDepth: 3
   }),
-  plugins: [
-    searchPlugin({
-      locales: {
-        '/': {
-          placeholder: '搜索'
-        }
-      }
-    })
-  ]
+  plugins: [searchPlugin]
 })

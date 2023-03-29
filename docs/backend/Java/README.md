@@ -1,6 +1,8 @@
 # Java
 
-::: details 什么是 JDBC？为什么需要 JDBC？
+###### 什么是 JDBC？为什么需要 JDBC？
+
+::: details 查看答案
 JDBC(Java Database Connectivity) Java 数据库连接。
 它是一个接口，由对应的数据库厂商完成接口实现类，该实现类就是所说的驱动。
 由于每个厂商底层代码实现不同，切换数据库需要改变 Java 代码，成本过大，所以需要 JDBC 进行调和，实现一套代码，操作不同的关系型数据库。
@@ -70,16 +72,22 @@ public class JDBCDemo {
 
 :::
 
-::: details isNotBlank 与 isNotEmpty 的区别？
+###### isNotBlank 与 isNotEmpty 的区别？
+
+::: details 查看答案
 isNotBlank 对空白字符判断结果为 false，isNotEmpty 对空白字符判断结果为 true。
 :::
 
-::: details tinyint(1) 与 char(1) 占用字节数一样吗？如何考虑选用哪一个？
+###### tinyint(1) 与 char(1) 占用字节数一样吗？如何考虑选用哪一个？
+
+::: details 查看答案
 tinyint(1) 和 char(1) 都是占用 1 个字节空间。
 在一次查询大量数据时，tinyint(1) 比 char(1) 更快。
 :::
 
-::: details 位运算符
+###### 位运算符
+
+::: details 查看答案
 
 参考文章：[Java 位运算符 &、|、^、~、<<、>>、>>>](https://www.cnblogs.com/SunArmy/p/9837348.html)
 
@@ -129,7 +137,9 @@ tinyint(1) 和 char(1) 都是占用 1 个字节空间。
 
 :::
 
-::: details 求 -123 的二进制数
+###### 求 -123 的二进制数
+
+::: details 查看答案
 
 负数的二进制求法:
 
@@ -149,7 +159,9 @@ tinyint(1) 和 char(1) 都是占用 1 个字节空间。
 
 :::
 
-::: details NGINX 如何配置 https
+###### NGINX 如何配置 https
+
+::: details 查看答案
 
 1. 在 `nginx/conf/nginx.conf` 文件中的 server 中添加以下配置：
 
@@ -207,4 +219,10 @@ nginx -t
 nginx -s reload
 ```
 
+:::
+
+###### Java 基本数据类型
+
+::: details 查看代码
+共 8 个。char、byte、int、short、double、float、long、boolean
 :::
