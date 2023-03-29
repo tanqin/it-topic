@@ -1,5 +1,5 @@
 import { defineUserConfig, defaultTheme } from 'vuepress'
-import { searchPlugin } from '@vuepress/plugin-search'
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 const base = '/it-topic/'
 
 export default defineUserConfig({
@@ -103,5 +103,13 @@ export default defineUserConfig({
     sidebar: 'auto',
     sidebarDepth: 3
   }),
-  plugins: [searchPlugin]
+  plugins: [searchProPlugin({
+      hotReload: true,
+      customFields: [
+        {
+          getter: ({ frontmatter }) => frontmatter.tag as string[],
+          formatter: `Tag: $content`,
+        },
+      ],
+  })]
 })
