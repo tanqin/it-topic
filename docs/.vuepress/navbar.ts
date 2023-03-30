@@ -78,8 +78,7 @@ const navbar:NavbarConfig =  [
       {
         text: '中软国际(2023-02-21)',
         link: '/frontendInterview/ZRGJ_2023-02-21'
-      },
-     
+      }
     ]
   }
 ]
