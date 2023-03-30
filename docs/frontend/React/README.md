@@ -1,12 +1,16 @@
 # React
 
-::: details 简述下 React 的事件代理机制？
+###### 简述下 React 的事件代理机制？
+
+::: details 查看答案
 事件处理函数并不会绑定到真实的节点上，而是绑定到 id = root 的根节点中，通过一个事件监听器维护一个映射来保存所有组件内部的事件监听和处理函数。
 当组件挂载或卸载时，只是在统一的事件监听器上插入或删除对象。
 当事件发生时，首先会经过统一的事件监听器，然后在映射里找到真正的事件处理函数并执行。
 :::
 
-::: details React18新特性
+###### React18新特性
+
+::: details 查看答案
 state 状态更新批处理
 
 ```tsx
@@ -62,12 +66,16 @@ useTransition：除了能提供 starTransition 以外，还能提供一个变量
 
 :::
 
-::: details 说说你对 useReducer 的理解
+###### 说说你对 useReducer 的理解
+
+::: details 查看答案
 reducer 是一个根据 action 提供的数据，将 state 从 A 转换为 B 的一个纯函数。
 语法：`(state, action) => newState`
 :::
 
-::: details 说说你对 React Hook的闭包陷阱的理解，有哪些解决方案？
+###### 说说你对 React Hook的闭包陷阱的理解，有哪些解决方案？
+
+::: details 查看答案
 由于闭包的存在，导致无法获取到 state 更新后的值。
 一个简单的例子如下：
 
@@ -98,7 +106,9 @@ function App() {
 方式二：我们可以参考方式一的原理，将 useState() 绑定的数据定义为一个对象，就可以保证 state 中的数据跟定时器中的数据指向的是同一内存地址。
 :::
 
-::: details react是否支持给标签设置自定义的属性，比如给video标签设置webkit-playsinline？
+###### react是否支持给标签设置自定义的属性，比如给video标签设置webkit-playsinline？
+
+::: details 查看答案
 react15 之前是不可以的。
 react16 以及之后版本可以设置，但是自定义的属性只能为 `string、number 或 object`。
 所以可以这么添加：
@@ -141,14 +151,18 @@ export class VideoComponent extends Component {
 
 :::
 
-::: details 应该在什么场景下使用 useMemo 和 useCallback ？
+###### 应该在什么场景下使用 useMemo 和 useCallback ？
+
+::: details 查看答案
 两者可以用于避免两次渲染之间的重复计算。
 要进行缓存处理时使用。
 在一个数据项依赖于其它数据项时，使用 useMemo 可以防止不必要的计算。
 一个函数具有依赖项，且该函数在多个地方都有使用，使用 useCallback 可以避免非必要的渲染。
 :::
 
-::: details 说说你对 dangerouslySetInnerHTML 的理解
+###### 说说你对 dangerouslySetInnerHTML 的理解
+
+::: details 查看答案
 dangerouslySetInnerHTML 相当于 js 中 innerHTML 属性。
 使用它是危险操作，存在跨站 XSS 攻击。
 可以借助 DOMPurify 库的 sanitize() 方法来对代码进行净化。
@@ -170,7 +184,9 @@ export default App
 
 :::
 
-::: details 你常用的 React Hooks 有哪些？
+###### 你常用的 React Hooks 有哪些？
+
+::: details 查看答案
 useState
 useRef
 useEffect

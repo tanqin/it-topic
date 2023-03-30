@@ -1,10 +1,16 @@
 # CSS
 
-::: details CSS 盒模型
+###### CSS 盒模型
+
+::: details 查看答案
 所有 HTML 元素都可以看作一个盒子，它的组成包括：content、padding、border、margin。
 :::
 
-::: details BFC 的理解？如何触发 BFC？它的应用场景？
+---
+
+###### BFC 的理解？如何触发 BFC？它的应用场景？
+
+::: details 查看答案
 BFC 用于提供一个隔离的独立容器，容器内部的元素不会影响到外部元素。
 
 触发条件：1. 根元素（html）2. 浮动元素（float 值不为 none） 3. 绝对定位或固定定位元素 4. display 为 inline-block、table、flex 等 5. overflow 不为 visible 的块元素
@@ -86,13 +92,41 @@ BFC 用于提供一个隔离的独立容器，容器内部的元素不会影响�
 
 :::
 
-::: details 什么是浮动元素脱标？
+---
+
+###### 什么是浮动元素脱标？
+
+::: details 查看答案
 脱标：脱离标准流
 
 当一个元素浮动之后看上去就像是从标准流中删除了一样，这就是浮动元素脱标。
 :::
 
-::: details css 选择器的种类
+---
+
+###### CSS 继承的概念？拥有继承特性的属性有哪些？
+
+::: details 查看答案
+概念：给父元素设置一些属性，后代元素自动拥有这些属性。
+
+拥有继承特性的属性：
+
+字体属性：font 系列（font-style、font-size、font-family 等）
+
+文本属性：color、line-height、text-align、text-indent
+
+可见性属性：visibility
+
+列表属性：list-style 系列（list-style-type、list-style-position、list-style-image）
+
+注：继承中特殊的 `a` 标签颜色不会继承，`h1~h6` 标签字体大小不会继承。
+:::
+
+---
+
+###### CSS 选择器的种类
+
+::: details 查看答案
 参考：[CSS选择器 （超全）](https://blog.csdn.net/weixin_54044338/article/details/123343408)
 
 分为五大类：元素选择器、关系选择器、属性选择器、伪类选择器、伪元素选择器
@@ -199,18 +233,4 @@ BFC 用于提供一个隔离的独立容器，容器内部的元素不会影响�
 
 :::
 
-::: details css 继承的概念？拥有继承特性的属性有哪些？
-概念：给父元素设置一些属性，后代元素自动拥有这些属性。
-
-拥有继承特性的属性：
-
-字体属性：font、font-size、font-family 等
-
-文本属性：text-indent、text-align、line-height、color 等
-
-可见性属性：visibility
-
-列表属性：list-style
-
-注：继承中特殊的 a 标签颜色不会继承；h1~h6 标签的字体大小不会继承。
-:::
+---
