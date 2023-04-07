@@ -3,8 +3,10 @@
 ###### 简述下 React 的事件代理机制？
 
 ::: details 查看答案
-事件处理函数并不会绑定到真实的节点上，而是绑定到 id = root 的根节点中，通过一个事件监听器维护一个映射来保存所有组件内部的事件监听和处理函数。
+事件处理函数并不会绑定到真实的节点上，而是绑定到 `id="root"` 的根节点中，通过一个事件监听器维护一个映射来保存所有组件内部的事件监听和处理函数。
+
 当组件挂载或卸载时，只是在统一的事件监听器上插入或删除对象。
+
 当事件发生时，首先会经过统一的事件监听器，然后在映射里找到真正的事件处理函数并执行。
 :::
 
@@ -58,6 +60,7 @@ setTimeout(() => {
 ## Transitions
 
 starTransition：用于标记非紧急的更新，用 starTransition 包裹起来就是告诉 React，这部分代码渲染的优先级不高，可以优先处理其它更重要的渲染。
+
 例子：[倾斜的毕达哥拉斯树](https://react-fractals-git-react-18-swizec.vercel.app/)
 
 useTransition：除了能提供 starTransition 以外，还能提供一个变量来跟踪当前渲染的执行状态。
@@ -70,6 +73,7 @@ useTransition：除了能提供 starTransition 以外，还能提供一个变量
 
 ::: details 查看答案
 reducer 是一个根据 action 提供的数据，将 state 从 A 转换为 B 的一个纯函数。
+
 语法：`(state, action) => newState`
 :::
 
@@ -77,6 +81,7 @@ reducer 是一个根据 action 提供的数据，将 state 从 A 转换为 B 的
 
 ::: details 查看答案
 由于闭包的存在，导致无法获取到 state 更新后的值。
+
 一个简单的例子如下：
 
 ```tsx

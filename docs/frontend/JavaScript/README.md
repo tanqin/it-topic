@@ -54,8 +54,6 @@ document.removeEventListener('scroll', printScrollHeight)
 ###### this 指向的几种情况
 
 ::: details 查看答案
-大多数情况下，函数调用方式决定了 this 的指向。
-
 全局环境中定义的函数，this 指向 window。
 
 new 关键字创建的实例对象，this 指向这个实例对象。
