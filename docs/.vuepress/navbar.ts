@@ -56,6 +56,10 @@ const navbar:NavbarConfig =  [
     text: '前端面试',
     children: [
       {
+        text: '飞项科技(2023-04-07)',
+        link: '/frontendInterview/FXKJ_2023-04-07'
+      },
+      {
         text: '乐博士中国(2023-04-07)',
         link: '/frontendInterview/LBSZG_2023-04-07'
       },
