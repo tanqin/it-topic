@@ -1,6 +1,6 @@
 import type { NavbarConfig } from 'vuepress'
 
-const navbar:NavbarConfig =  [
+const navbar: NavbarConfig = [
   {
     text: '前端',
     link: '/frontend/',
@@ -56,40 +56,48 @@ const navbar:NavbarConfig =  [
     text: '前端面试',
     children: [
       {
-        text: '飞项科技(2023-04-07)',
-        link: '/frontendInterview/FXKJ_2023-04-07'
+        text: '2025-08-08_华慧（广州）',
+        link: '/frontendInterview/2025-08-08_HHGZ'
       },
       {
-        text: '乐博士中国(2023-04-07)',
-        link: '/frontendInterview/LBSZG_2023-04-07'
+        text: '2025-08-07_金溪欣',
+        link: '/frontendInterview/2025-08-07_JXX'
       },
       {
-        text: '宏景科技(2023-04-03)',
-        link: '/frontendInterview/HJKJ_2023-04-03'
+        text: '2023-04-07_飞项科技',
+        link: '/frontendInterview/2023-04-07_FXKJ'
       },
       {
-        text: '悠久商服(2023-03-18)',
-        link: '/frontendInterview/YJSF_2023-02-18'
+        text: '2023-04-07_乐博士中国',
+        link: '/frontendInterview/2023-04-07_LBSZG'
       },
       {
-        text: '普睿德利(2023-03-15)',
-        link: '/frontendInterview/PRDL_2023-03-15'
+        text: '2023-04-03_宏景科技',
+        link: '/frontendInterview/2023-04-03_HJKJ'
       },
       {
-        text: '华微软件(2023-03-08)',
-        link: '/frontendInterview/HWRJ_2023-03-08'
+        text: '2023-03-18_悠久商服',
+        link: '/frontendInterview/2023-02-18_YJSF'
       },
       {
-        text: '宝露公司(2023-03-07)',
+        text: '2023-03-15_普睿德利',
+        link: '/frontendInterview/2023-03-15_PRDL'
+      },
+      {
+        text: '2023-03-08_华微软件',
+        link: '/frontendInterview/2023-03-08_HWRJ'
+      },
+      {
+        text: '2023-03-07_宝露公司',
         link: '/frontendInterview/BLGS_2023-03-07'
       },
       {
-        text: '美盈智能(2023-02-22)',
-        link: '/frontendInterview/MYZN_2023-02-22'
+        text: '2023-02-22_美盈智能',
+        link: '/frontendInterview/2023-02-22_MYZN'
       },
       {
-        text: '中软国际(2023-02-21)',
-        link: '/frontendInterview/ZRGJ_2023-02-21'
+        text: '2023-02-21_中软国际',
+        link: '/frontendInterview/2023-02-21_ZRGJ'
       }
     ]
   }
