@@ -56,6 +56,30 @@ const navbar: NavbarConfig = [
     text: '前端面试',
     children: [
       {
+        text: '2025-08-14_金财互联',
+        link: '/frontendInterview/2025-08-14_JCHL'
+      },
+      {
+        text: '2025-08-14_通联支付',
+        link: '/frontendInterview/2025-08-14_TLZF'
+      },
+      {
+        text: '2025-08-13_LesPark',
+        link: '/frontendInterview/2025-08-13_LesPark'
+      },
+      {
+        text: '2025-08-12_精灵计算机',
+        link: '/frontendInterview/2025-08-12_JLJSJ'
+      },
+      {
+        text: '2025-08-12_广州感联',
+        link: '/frontendInterview/2025-08-12_GZGL'
+      },
+      {
+        text: '2025-08-12_广州智算',
+        link: '/frontendInterview/2025-08-12_GZZS'
+      },
+      {
         text: '2025-08-08_华慧（广州）',
         link: '/frontendInterview/2025-08-08_HHGZ'
       },
