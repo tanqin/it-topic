@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-f9e30908","path":"/intro/","title":"题库说明","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"contributors":[{"name":"tanqin","email":"cn.tanqin@qq.com","commits":1}]},"filePathRelative":"intro/README.md","excerpt":""}');export{t as data};

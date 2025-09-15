@@ -1,0 +1,1 @@
+import{_ as a,p as r,q as n,R as t,t as s}from"./framework-596b4733.js";const d={};function o(c,e){return r(),n("div",null,[...e[0]||(e[0]=[t("h1",{id:"题库说明",tabindex:"-1"},[t("a",{class:"header-anchor",href:"#题库说明","aria-hidden":"true"},"#"),s(" 题库说明")],-1)])])}const l=a(d,[["render",o],["__file","index.html.vue"]]);export{l as default};
