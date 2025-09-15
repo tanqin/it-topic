@@ -56,6 +56,10 @@ const navbar: NavbarConfig = [
     text: '前端面试',
     children: [
       {
+        text: '2025-09-12_南方电网',
+        link: '/frontendInterview/2025-09-12_NFDW'
+      },
+      {
         text: '2025-08-14_金财互联',
         link: '/frontendInterview/2025-08-14_JCHL'
       },
@@ -113,7 +117,7 @@ const navbar: NavbarConfig = [
       },
       {
         text: '2023-03-07_宝露公司',
-        link: '/frontendInterview/BLGS_2023-03-07'
+        link: '/frontendInterview/2023-03-07_BLGS'
       },
       {
         text: '2023-02-22_美盈智能',
