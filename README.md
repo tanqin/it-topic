@@ -37,20 +37,20 @@ pnpm run dev
 
 以「前端面试」专栏为例，添加一篇“2023年1月1日在【摸鱼公司】参加面试”的文章：
 
-1. 找到「前端面试」专栏对应的目录 `docs/frontendInterview`，创建 markdown 文件 `MYGS_2023-01-01.md`（格式为公司拼音首字母+日期的形式），如下图所示：
-![step1](https://s1.ax1x.com/2023/03/30/ppghOT1.png)
+1. 找到「前端面试」专栏对应的目录 `docs/frontendInterview`，创建 markdown 文件 `2023-01-01_MYGS.md`（格式为公司拼音首字母+日期的形式），如下图所示：
+![step1](https://t.tutu.to/img/KNBrq)
 
-2. 找到 `docs/frontendInterview/A_TEMPLATE.md` 模板文件，复制内容并粘贴到自己的 `MYGS_2023-01-01.md` 中，如下图所示：
-![step2](https://s1.ax1x.com/2023/03/30/ppghvY6.png)
+2. 找到 `docs/frontendInterview/20xx-xx-xx_TEMPLATE.md` 模板文件，复制内容并粘贴到自己的 `2023-01-01_MYGS.md` 中，如下图所示：
+![step2](https://t.tutu.to/img/KNkBr)
 
 3. 修改文章内容，如下图所示：
-![step3](https://s1.ax1x.com/2023/03/30/ppghjFx.png)
+![step3](https://t.tutu.to/img/KN9jG)
 
 4. 找到 `docs/.vuepress/navbar.ts` 导航配置文件，找到「前端面试」配置项，在 `children` 中配置我们自己刚刚写的这片文章的路由（注意：配置请按时间倒序添加），如下图所示：
-![step4](https://s1.ax1x.com/2023/03/30/ppghqm9.png)
+![step4](https://t.tutu.to/img/KNaln)
 
 5. 在页面中查看效果：
-![step5](https://s1.ax1x.com/2023/03/30/ppghLwR.png)
+![step5](https://t.tutu.to/img/KNhod)
 
 6. 代码推送后，CI 自动部署会在 2 分钟之内将文章同步到线上【💥：推送前记得先拉取代码】
 
